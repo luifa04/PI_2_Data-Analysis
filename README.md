@@ -38,7 +38,7 @@ Para la elaboración de este proyecto se utilizó Python y Pandas para los proce
 
 Luego, para la obtención complementaria de datos para el cálculo de la población en el año 2021 se realizó webscraping utilizando la librería BeautifulSoup. Todos los detalles se explican [aquí](Poblacion_CABA.ipynb).
 
-Finalmente, para la construcción de un dashboard interactivo se utiliza Power BI, el cuál se puede consultar [aquí](DashBoard.pbix). También se puede visualizar online en este [link]().
+Finalmente, para la construcción de un dashboard interactivo se utiliza Power BI, el cuál se puede consultar [aquí](DashBoard.pbix). 
 
 ## <h1 align="center">**EDA**</h1>
 
