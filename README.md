@@ -1,153 +1,150 @@
 <h1 align='center'>
- <b>Homicidios por siniestros viales en la Ciudad Autónoma de Buenos Aires</b>
+ <b>Homicides in Traffic Accidents in the City of Buenos Aires</b>
 </h1>
 
 <p align='center'>
 <img src = 'Img/Siniestros-viales.jpg' height = 500>
 <p>
 
-## <h1 align="center">**Introduccion**</h1>
+## <h1 align="center">**Introduction**</h1>
 
-En este escenario simulado, asumimos el papel de un Analista de Datos en el equipo de una empresa consultora. La empresa ha sido contactada por el Observatorio de Movilidad y Seguridad Vial (OMSV), un centro de estudios bajo la jurisdicción de la Secretaría de Transporte del Gobierno de la Ciudad Autónoma de Buenos Aires (CABA). El OMSV ha solicitado a nuestro equipo la realización de un proyecto de análisis de datos.
+In this simulated scenario, we assume the role of a Data Analyst in a consulting company's team. The company has been contacted by the Mobility and Road Safety Observatory (OMSV), a research center under the jurisdiction of the Ministry of Transportation of the Government of the Autonomous City of Buenos Aires (CABA). The OMSV has requested our team to conduct a data analysis project.
 
-El objetivo primordial de este proyecto es proporcionar información valiosa que permita a las autoridades locales tomar medidas concretas para reducir el número de víctimas mortales en accidentes de tránsito ocurridos en CABA. Para llevar a cabo este análisis, contamos con un conjunto de datos que abarca los homicidios en siniestros viales ocurridos en la Ciudad de Buenos Aires durante el período comprendido entre 2016 y 2021.
+The primary objective of this project is to provide valuable information that enables local authorities to take concrete measures to reduce the number of fatalities in traffic accidents in CABA. To carry out this analysis, we have a dataset covering homicides in traffic accidents that occurred in the City of Buenos Aires between 2016 and 2021.
 
-Como productos finales, se espera la entrega de un informe detallado que describa las tareas realizadas, las metodologías adoptadas y las conclusiones principales. Además, se solicita la creación de un panel de visualización interactivo (dashboard) que facilite la interpretación de la información y su análisis.
-
-## <h1 align="center">**Contexto**</h1>
-
-Los siniestros viales, también denominados accidentes de tráfico o accidentes de tránsito, constituyen eventos que involucran vehículos en las vías públicas y pueden originarse por diversas causas, como colisiones entre automóviles, motocicletas, bicicletas o peatones, atropellos, choques con objetos fijos o caídas de vehículos. Estos incidentes pueden acarrear consecuencias que van desde daños materiales hasta lesiones graves o incluso fatales para los involucrados.
-
-La Ciudad Autónoma de Buenos Aires (CABA), situada en la provincia de Buenos Aires, Argentina, no escapa a esta problemática. Los siniestros viales representan una preocupación significativa debido al elevado volumen de tráfico y la densidad poblacional en la zona. Estos eventos pueden afectar de manera considerable la seguridad de los residentes y visitantes de la ciudad, así como la infraestructura vial y los servicios de emergencia.
-
-Según el censo poblacional realizado en 2022, la población de CABA se estima en 3,120,612 habitantes, ocupando una superficie de 200 km^2, lo que implica una densidad aproximada de 15,603 hab/km^2. Además, en julio de 2023, se registraron 12,437,735 vehículos transitando por los peajes de las autopistas de acceso a CABA. En este contexto, la prevención de siniestros viales y la implementación de políticas efectivas son fundamentales para abordar de manera adecuada esta problemática.
-
-## <h1 align="center">**Datos**</h1>
-
-Para este proyecto se trabajó con la **Bases de Víctimas Fatales en Siniestros Viales** que se encuentra en formato de Excel y contiene dos pestañas de datos:
-
-* **HECHOS**: que contiene una fila de hecho con id único y las variables temporales, espaciales y participantes asociadas al mismo.
-* **VICTIMAS**: contiene una fila por cada víctima de los hechos y las variables edad, sexo y modo de desplazamiento asociadas a cada víctima. Se vincula a los HECHOS mediante el id del hecho.
-
-En este [documento](Data\NOTAS_HOMICIDIOS_SINIESTRO_VIAL.pdf) se detallan todas las definiciones manejadas en los datos y en el desarrollo de este proyecto. Por otra parte, en este [link](https://data.buenosaires.gob.ar/dataset/victimas-siniestros-viales) se encuentran los datos utilizados en el análisis.
+As final deliverables, the project includes a detailed report describing the tasks performed, adopted methodologies, and key conclusions. Additionally, the creation of an interactive visualization panel (dashboard) is requested to facilitate the interpretation and analysis of information.
 
 
-## <h1 align="center">**Tecnologias**</h1>
+## <h1 align="center">**Context**</h1>
 
-Para la elaboración de este proyecto se utilizó Python y Pandas para los procesos de extracción, transformación y carga de los datos, como así también para el análisis exploratorio de los datos. En el siguiente apartado se describen los resultados del análisis.
 
-Luego, para la obtención complementaria de datos para el cálculo de la población en el año 2021 se realizó webscraping utilizando la librería BeautifulSoup. Todos los detalles se explican [aquí](Poblacion_CABA.ipynb).
+Traffic accidents, also known as road accidents, involve vehicles on public roads and can result from various causes such as collisions between cars, motorcycles, bicycles, or pedestrians, as well as collisions with fixed objects or vehicle overturns. These incidents can lead to consequences ranging from property damage to severe or even fatal injuries for those involved.
 
-Finalmente, para la construcción de un dashboard interactivo se utiliza Power BI, el cuál se puede consultar [aquí](DashBoard.pbix). 
+The Autonomous City of Buenos Aires (CABA), located in the province of Buenos Aires, Argentina, is not immune to this issue. Traffic accidents pose a significant concern due to the high volume of traffic and population density in the area. These events can significantly impact the safety of residents and visitors, as well as the road infrastructure and emergency services.
+
+According to the 2022 population census, CABA is estimated to have a population of 3,120,612 inhabitants, covering an area of 200 km², resulting in an approximate density of 15,603 inhabitants/km². Additionally, in July 2023, 12,437,735 vehicles were recorded passing through toll booths on access highways to CABA. In this context, the prevention of traffic accidents and the implementation of effective policies are crucial to address this issue adequately.
+
+
+## <h1 align="center">**Data**</h1>
+
+For this project, we worked with the Fatal Victims in Traffic Accidents dataset in Excel format, containing two data sheets:
+
+- **HECHOS:** Contains a row per incident with a unique ID and associated temporal, spatial, and participant variables.
+- **VICTIMAS:** Contains a row for each victim of the incidents with variables such as age, gender, and mode of displacement.
+
+For a detailed explanation of the definitions used in the data and the development of this project, refer to this [document](Data\NOTAS_HOMICIDIOS_SINIESTRO_VIAL.pdf). The dataset used in the analysis can be found [here](https://data.buenosaires.gob.ar/dataset/victimas-siniestros-viales).
+
+## <h1 align="center">**Technologies**</h1>
+
+Python and Pandas were used for data extraction, transformation, and loading processes, as well as for exploratory data analysis. Additional data for population estimation in 2021 was obtained through web scraping using the BeautifulSoup library. Details can be found [here](Poblacion_CABA.ipynb). Finally, Power BI was utilized for the construction of an interactive dashboard, available [here](DashBoard.pbix).
 
 ## <h1 align="center">**EDA**</h1>
 
-En primer lugar, se realizó la extracción de los datos. Luego de llevar a cabo un breve análisis exploratorio y descriptivo de estos, abordaremos temas como outliers, valores duplicados y valores faltantes. Además, nos ocuparemos de normalizar ciertas columnas para poder trabajar con ellas de manera óptima en la realización de gráficos pertinentes con sus respectivas variables. Se decidió dividir esta EDA en dos partes para una mayor practicidad y facilidad de lectura y organización. Esta primera  [EDA_PARTE_1](EDA_Parte_1.ipynb)abarcará lo mencionado anteriormente, y posteriormente, en el segundo documento [EDA_PARTE_2](EDA_Parte_2.ipynb), se llevarán a cabo los gráficos pertinentes.
 
-# <h1 align="center">**Analisis de los datos**</h1>
-## <h1 align="center">**Análisis de la Distribución Temporal**</h1>
+First, data extraction was performed. After a brief exploratory and descriptive analysis, topics such as outliers, duplicated values, and missing values will be addressed. Additionally, certain columns will be normalized to work optimally in the creation of relevant graphics with their respective variables. This EDA is divided into two parts for practicality and readability. This first [EDA_PART_1](EDA_Part_1.ipynb) covers the aforementioned, and subsequently, in the second document [EDA_PART_2](EDA_Part_2.ipynb), relevant graphs will be created.
 
-En una primera evaluación, se examinó la variable temporal para comprender la distribución de los homicidios en distintas escalas temporales. La distribución anual de víctimas fatales es notablemente del 60% durante los primeros 3 años del conjunto de datos, con una disminución marcada en 2020 debido a las medidas de cuarentena por la pandemia de COVID-19. La variación mensual a lo largo del año es significativa, con un pico en diciembre. Este aumento en diciembre se relaciona con la flexibilización de las medidas de cuarentena.
+# <h1 align="center">**Data Analysis**</h1>
+## <h1 align="center">**Analysis of Temporal Distribution**</h1>
 
-Descendiendo en la escala temporal, se observa que el 70% de las víctimas perdieron la vida entre lunes y viernes, sugiriendo una posible asociación con los desplazamientos diarios al trabajo. Sin embargo, en la distribución semanal, no se aprecian diferencias significativas entre los diversos días. Es decir, la cantidad de víctimas en sábado o domingo es aproximadamente la misma para el conjunto de datos.
+In a preliminary evaluation, the temporal variable was examined to understand the distribution of homicides at different time scales. The annual distribution of fatal victims is notably 60% during the first 3 years of the dataset, with a marked decrease in 2020 due to COVID-19 quarantine measures. Monthly variation throughout the year is significant, with a peak in December. This December increase is related to the easing of quarantine measures.
 
-Al analizar las franjas horarias, se destaca que el 12% de las víctimas se registraron entre las 6 a 8 de la mañana, lo que sugiere una posible relación con el horario de ingreso al trabajo. No obstante, dentro de esta franja horaria, el 55% de las víctimas experimentaron los incidentes durante el fin de semana.
+Descending in the temporal scale, it is observed that 70% of the victims lost their lives between Monday and Friday, suggesting a possible association with daily commuting. However, in the weekly distribution, no significant differences are seen between different days. That is, the number of victims on Saturday or Sunday is approximately the same for the dataset.
 
-## <h1 align="center">**Perfil de la Víctima**</h1>
+Analyzing the time slots, it stands out that 12% of the victims were recorded between 6 to 8 in the morning, suggesting a possible relation to the work entry hours. However, within this time frame, 55% of the victims experienced incidents during the weekend.
 
-En cuanto al perfil de la víctima, se observa que el 77% de las víctimas son de género masculino. Casi el 50% de las víctimas se sitúan en el rango de edad de 25 a 44 años, y dentro de este grupo, el 84% son hombres.
+## <h1 align="center">**Victim Profile**</h1>
 
-En relación al rol de la víctima, es decir, la posición que ocupaba al momento del incidente, el 48% eran conductores. Este 48% se divide en un 77% de víctimas que se movilizaban en moto y un 19% en auto. En cuanto al medio de transporte al momento del hecho, el 42% son conductores de moto, siendo el 88% de estos conductores de género masculino.
 
-En cuanto a la responsabilidad en el incidente, es decir, el vehículo que ocupaba la persona acusada, en el 29% de los casos fue un auto, pero el 75% son responsabilidad de vehículos como autos, colectivos y camiones.
+Regarding the victim's profile, 77% of the victims are male. Almost 50% of the victims fall in the age range of 25 to 44 years, and within this group, 84% are males.
 
-## <h1 align="center">**Analisis por ubicacion**</h1>
+Regarding the victim's role, i.e., the position they occupied at the time of the incident, 48% were drivers. This 48% is divided into 77% of victims who were moving on motorcycles and 19% in cars. Regarding the means of transport at the time of the incident, 42% are motorcycle drivers, with 88% of these drivers being male.
 
-se exploraron patrones en la distribución espacial de los hechos. Un hallazgo destacado es que en todas las comunas de CABA, las avenidas, vías arteriales de al menos 13 metros de ancho, son comunes en los accidentes. El 62% de las víctimas perdieron la vida en avenidas, y el 82% de estos incidentes ocurrieron en el cruce de avenidas con otras calles. Este patrón se mantiene consistente a lo largo de los años. En relación al rol de la víctima, varía entre moto y peatón en distintas comunas.
+Regarding responsibility in the incident, i.e., the vehicle occupied by the accused person, in 29% of cases, it was a car, but 75% are the responsibility of vehicles such as cars, buses, and trucks.
+
+## <h1 align="center">**Analysis by Location**</h1>
+
+Patterns in the spatial distribution of incidents were explored. A notable finding is that in all districts of CABA, avenues, arterial roads at least 13 meters wide, are common in accidents. 62% of victims lost their lives on avenues, and 82% of these incidents occurred at the intersection of avenues with other streets. This pattern remains consistent over the years. Regarding the victim's role, it varies between motorcycles and pedestrians in different districts.
 
 # <h1 align="center">**KPIs**</h1>
 
 
-- `*Reducir en un 10% la tasa de homicidios en siniestros viales de los últimos seis meses, en CABA, en comparación con la tasa de homicidios en siniestros viales del semestre anterior*`.
-  
-  Definimos a la **tasa de homicidios en siniestros viales** como el número de víctimas fatales en accidentes de tránsito por cada 100,000 habitantes en un área geográfica durante un período de tiempo específico.
-  Su fórmula es: 
-      
-  $\text{Tasa de homicidios en siniestros viales} = \frac{\text{Número de homicidios en siniestros viales}}{\text{Población total}}·100,000$
+- `*Reduce by 10% the homicide rate in traffic accidents in the last six months, in CABA, compared to the homicide rate in traffic accidents in the previous semester*`.
 
-  Para determinar la Población Total en el año 2021, se realizó una estimación basada en los censos poblacionales de 2010 y 2022. Este valor se utiliza en el cálculo de la Tasa de Homicidios en Siniestros Viales.
+  We define the **homicide rate in traffic accidents** as the number of fatal victims in traffic accidents per 100,000 inhabitants in a geographical area during a specific period. Its formula is:
 
-  En el año 2021, la tasa de homicidios en siniestros viales fue de 1.77, lo que indica que hubo aproximadamente 1.77 homicidios en accidentes de tránsito por cada 100,000 habitantes durante los primeros 6 meses del año. El objetivo establecido es reducir esta tasa al 1.60 en el siguiente semestre de 2021, representando una disminución del 10%.
+  $\text{Homicide rate in traffic accidents} = \frac{\text{Number of homicides in traffic accidents}}{\text{Total population}}·100,000$
 
-  Al calcular el KPI para este período, se encuentra que la Tasa de Homicidios en Siniestros Viales fue de 1.35, lo que significa que se cumplió con éxito el objetivo propuesto. Este resultado sugiere una mejora en la seguridad vial durante el segundo semestre de 2021, logrando una reducción del 10% en comparación con el semestre anterior.
+  To determine the Total Population in 2021, an estimate was made based on the population censuses of 2010 and 2022. This value is used in the calculation of the Homicide Rate in Traffic Accidents.
 
+  In 2021, the homicide rate in traffic accidents was 1.77, indicating that there were approximately 1.77 homicides in traffic accidents per 100,000 inhabitants during the first 6 months of the year. The established goal is to reduce this rate to 1.60 in the following semester of 2021, representing a 10% decrease.
 
+  By calculating the KPI for this period, it is found that the Homicide Rate in Traffic Accidents was 1.35, meaning that the proposed objective was successfully achieved. This result suggests an improvement in road safety during the second semester of 2021, achieving a 10% reduction compared to the previous semester.
 
+- `*Reduce by 7% the number of fatal accidents involving motorcyclists in the last year, in CABA, compared to the previous year*`.
 
-- `*Reducir en un 7% la cantidad de accidentes mortales de motociclistas en el último año, en CABA, respecto al año anterior*`.
-  
-  Definimos a la **cantidad de accidentes mortales de motociclistas en siniestros viales** como el número absoluto de accidentes fatales en los que estuvieron involucradas víctimas que viajaban en moto en un determinado periodo temporal.
-  Su fórmula para medir la evolución de los accidentes mortales con víctimas en moto es:
-    
-    $\text{Cantidad de accidentes mortales de motociclistas} = -\frac{\text{Víctimas moto año anterior - Víctimas moto año actual}}{\text{Víctimas moto año anterior}}·100$
+  We define the **number of fatal accidents involving motorcyclists in traffic accidents** as the absolute number of fatal accidents involving victims traveling on motorcycles in a given time period. Its formula to measure the evolution of fatal accidents with motorcycle victims is:
 
-    Donde:
-    - $\text{Víctimas moto año anterior}$: Número de accidentes mortales con víctimas en moto en el año anterior
-    - $\text{Víctimas moto año actual}$: Número de accidentes mortales con víctimas en moto en el año actual 
+  $\text{Number of fatal accidents involving motorcyclists} = -\frac{\text{Motorcycle victims previous year - Motorcycle victims current year}}{\text{Motorcycle victims previous year}}·100$
 
-  Para analizar la evolución de los accidentes mortales de motociclistas, se compararon las cifras entre el año 2020 (considerado como el año anterior) y el año 2021 (considerado como el año actual). El objetivo establecido era lograr una reducción del 7% en la cantidad de accidentes mortales en comparación con el año anterior.
+  Where:
+  - $\text{Motorcycle victims previous year}$: Number of fatal accidents with motorcycle victims in the previous year
+  - $\text{Motorcycle victims current year}$: Number of fatal accidents with motorcycle victims in the current year
 
-  Inicialmente, se calculó la Cantidad de Accidentes Mortales de Motociclistas para el año 2020, obteniendo un valor de -44.00. Este resultado negativo indica una disminución con respecto al año anterior y establece la base para el objetivo a alcanzar. El objetivo propuesto fue una reducción del 7%, equivalente a -40.92 accidentes.
+  To analyze the evolution of fatal accidents involving motorcyclists, the figures for 2020 (considered the previous year) and 2021 (considered the current year) were compared. The established goal was to achieve a 7% reduction in the number of fatal accidents compared to the previous year.
 
-  Sin embargo, al calcular la Cantidad de Accidentes Mortales de Motociclistas para el año 2021, se obtuvo un valor de 64.29, lo que indica un aumento del 64% en la cantidad de muertes de conductores de motocicletas en comparación con el año 2020. Este resultado sugiere que, lamentablemente, no se logró cumplir con el objetivo establecido, ya que se experimentó un incremento significativo en la cantidad de accidentes mortales de motociclistas durante el año 2021.
+  Initially, the Number of Fatal Accidents Involving Motorcyclists for 2020 was calculated, obtaining a value of -44.00. This negative result indicates a decrease compared to the previous year and sets the basis for the goal to be achieved. The proposed goal was a reduction of 7%, equivalent to -40.92 accidents.
 
+  However, when calculating the Number of Fatal Accidents Involving Motorcyclists for 2021, a value of 64.29 was obtained, indicating a 64% increase in the number of deaths of motorcycle drivers compared to 2020. This result suggests that, unfortunately, the established goal was not achieved, as a significant increase in the number of fatal accidents involving motorcyclists was experienced during 2021.
 
+* `*Reduce by 10% the homicide rate on avenues in the last year, in CABA, compared to the previous year*`
 
-* `*Reducir en un 10% la tasa de homicidios en las avenidas en el último año, en CABA, respecto al año anterior*`
+  As seen in the exploratory analysis, 62% of fatal victims were traveling on avenues at the time of the incident. The **Homicide Rate on Avenues** is defined as the number of fatal victims in traffic accidents on avenues per 100,000 inhabitants in a geographical area during a specific period, in this case, annually. Its formula is:
 
-    Como se vio en el análisis exploratorio, el 62% de las víctimas mortales transitaban por avenidas al momento del hecho. Se define a la **Tasa de homicidios en las avenidas** al número de víctimas fatales en accidentes de tránsito en avenidas por cada 100,000 habitantes en un área geográfica durante un período de tiempo específico, en este caso anual. Su fórmula es:
+  $\text{Homicide rate on avenues} = \frac{\text{Number of fatal accidents with victims that occurred on avenues}}{\text{Total population}}·100000$
 
-    $\text{Tasa de homicidios en las avenidas} = \frac{\text{Número de accidentes mortales con víctimas ocurridas en avenidas}}{\text{Total de la población}}·100000$
+  To analyze safety on avenues, the Homicide Rate on Avenues for 2020 was calculated, obtaining a value of 1.68. This indicator served as a reference to set an ambitious goal for the following year, establishing a 10% reduction in the homicide rate compared to 2020. The defined goal was to achieve a Homicide Rate on Avenues of 1.51 for 2021.
 
-    
-    Para analizar la seguridad en las avenidas, se calculó la Tasa de Homicidios en Avenidas para el año 2020, obteniendo un valor de 1.68. Este indicador sirvió como referencia para establecer un objetivo ambicioso para el año siguiente, fijando una reducción del 10% en la tasa de homicidios en comparación con el año 2020. El objetivo definido fue alcanzar una Tasa de Homicidios en Avenidas de 1.51 para el año 2021.
-
-    Sin embargo, al calcular la Tasa de Homicidios en Avenidas para el año 2021, se obtuvo un valor de 1.97, indicando que no se logró cumplir con el objetivo establecido. En lugar de experimentar una disminución del 10%, la tasa de homicidios en avenidas aumentó en comparación con el año anterior, superando las expectativas planteadas. Este resultado sugiere la necesidad de revisar y ajustar estrategias para mejorar la seguridad vial en las avenidas de la Ciudad Autónoma de Buenos Aires
+  However, when calculating the Homicide Rate on Avenues for 2021, a value of 1.97 was obtained, indicating that the established goal was not achieved. Instead of experiencing a 10% decrease, the homicide rate on avenues increased compared to the previous year, exceeding the set expectations. This result suggests the need to review and adjust strategies to improve road safety on the avenues of the Autonomous City of Buenos Aires.
 
 <p align='center'>
 <img src = 'Img/kpis.png' height = 350>
 <p>
 
-## <h1 align="center">**Conclusiones**</h1>
+## <h1 align="center">**Conclusions**</h1>
 
-Durante el periodo de 2016 a 2021, se registraron 717 víctimas fatales en accidentes de tránsito en la Ciudad Autónoma de Buenos Aires (CABA). De este total, el 70% de los incidentes tuvieron lugar durante los días de la semana, resaltando la importancia de focalizar las medidas de seguridad en estos momentos específicos.
+During the period from 2016 to 2021, 717 fatal victims were recorded in traffic accidents in the Autonomous City of Buenos Aires (CABA). Of this total, 70% of incidents took place during weekdays, highlighting the importance of focusing safety measures during these specific times.
 
-### Hallazgos Clave:
+### Key Findings:
 
-- **Franja Horaria:** El 12% de los siniestros fatales ocurre entre las 6 y las 8 de la mañana, principalmente durante los fines de semana.
+- **Time Slot:** 12% of fatal accidents occur between 6 and 8 in the morning, mainly during weekends.
   
-- **Mes Crítico:** Diciembre registra el máximo de fallecimientos, destacando la importancia de campañas específicas durante este mes.
+- **Critical Month:** December records the maximum number of deaths, emphasizing the importance of specific campaigns during this month.
 
-- **Género y Edad:** El 77% de las víctimas fueron hombres, la mitad de ellos en el rango de 25 a 44 años.
+- **Gender and Age:** 77% of victims were males, half of them in the 25 to 44 age range.
 
-- **Tipo de Usuario:** Motociclistas representan el 42% de los casos.
+- **User Type:** Motorcyclists represent 42% of cases.
 
-- **Avenidas:** El 62% de los homicidios viales ocurrieron en avenidas, con el 82% en cruces con otras calles.
+- **Avenues:** 62% of traffic homicides occurred on avenues, with 82% at intersections with other streets.
 
-### Recomendaciones:
+### Recommendations:
 
-1. Continuar monitoreando los objetivos propuestos con campañas específicas, especialmente dirigidas a conductores de motos y usuarios de avenidas.
+1. Continue monitoring the proposed objectives with specific campaigns, especially targeting motorcycle drivers and avenue users.
 
-2. Reforzar las campañas de seguridad vial entre los días viernes a lunes, intensificando particularmente en el mes de Diciembre.
+2. Strengthen road safety campaigns between Fridays and Mondays, intensifying particularly in December.
 
-3. Puntualizar campañas de conducción segura en avenidas y cruces de calles.
+3. Emphasize safe driving campaigns on avenues and street intersections.
 
-4. Dirigir las campañas de seguridad hacia el sexo masculino, especialmente en cuanto a conducción en moto, para un rango etario entre los 15 a 44 años.
+4. Direct safety campaigns towards males, especially in terms of motorcycle driving, for an age range between 15 and 44 years.
 
-### Resultados y Metas Cumplidas:
+### Results and Goals Achieved:
 
-A pesar de haber alcanzado con éxito el objetivo de reducir la tasa de homicidios en siniestros viales durante el segundo semestre de 2021, no se lograron cumplir las metas establecidas para disminuir la cantidad de accidentes mortales en motociclistas ni en avenidas durante ese mismo año en comparación con 2020.
+Despite successfully achieving the goal of reducing the homicide rate in traffic accidents during the second semester of 2021, the set goals to decrease the number of fatal accidents involving motorcyclists and on avenues during the same year compared to 2020 were not met.
 
-En consecuencia, se recomienda continuar monitoreando y ajustando estrategias, con un enfoque específico en campañas dirigidas a conductores de motos, usuarios de avenidas y días específicos de la semana, especialmente en el mes de Diciembre. Además, se sugiere reforzar las campañas destinadas al sexo masculino, abarcando la conducción segura, especialmente para aquellos en el rango etario entre 15 y 44 años. Estas acciones podrían contribuir significativamente a mejorar la seguridad vial en CABA.
+As a result, it is recommended to continue monitoring and adjusting strategies, with a specific focus on campaigns targeting motorcycle drivers, avenue users, and specific days of the week, especially in December. Additionally, reinforcing campaigns aimed at males, covering safe driving, especially for those in the age range between 15 and 44 years, is suggested. These actions could significantly contribute to improving road safety in CABA.
+
+
+
+
+
 
 
